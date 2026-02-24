@@ -1,0 +1,65 @@
+<div class="bg-gray-50 font relative">
+  
+  <button 
+    (click)="toggleMusica()"
+    class="fixed bottom-6 right-6 z-[60] bg-white p-3 rounded-full shadow-lg border border-gray-200 flex items-center justify-center hover:scale-110 transition-transform active:scale-95"
+  >
+    <svg *ngIf="!reproduciendo" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#9a9a76">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+    <svg *ngIf="reproduciendo" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#9a9a76">
+      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+    </svg>
+  </button>
+
+  <div style="position: absolute; top: -1000px; left: -1000px; visibility: hidden;">
+    <div id="youtube-player"></div>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-bienvenida></app-bienvenida>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-versiculo-lema></app-versiculo-lema>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-cuando></app-cuando>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-donde></app-donde>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-foto [imageSrc]="'assets/images/2.webp'" [imageAlt]="'Imagen 1'"></app-foto>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-intinerario></app-intinerario>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-lista-regalos (abrirModal)="abrirModal($event)"></app-lista-regalos>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-foto [imageSrc]="'assets/images/3.webp'" [imageAlt]="'Imagen 2'"></app-foto>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-dresscode></app-dresscode>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-confirmacion></app-confirmacion>
+  </div>
+
+  <div class="opacity-0" appFadeIn>
+    <app-despedida></app-despedida>
+  </div>
+
+  <app-form [mostrar]="ModalState" (abrirModal)="abrirModal($event)"></app-form>
+
+</div>

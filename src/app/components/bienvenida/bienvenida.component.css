@@ -1,0 +1,22 @@
+.hero {
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: 50% 8%;
+}
+
+.f1 {
+  font-family: "Alice";
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.f2 {
+  font-family: "Cardo";
+  font-size: 48px;
+}
+
+.f3 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  letter-spacing: 2px;
+}
